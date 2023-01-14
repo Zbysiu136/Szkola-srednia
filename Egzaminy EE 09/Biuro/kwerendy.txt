@@ -1,0 +1,15 @@
+kw 1 
+SELECT id, cel, cena FROM wycieczki WHERE dostepna = 0;
+
+
+kw 2
+SELECT nazwaPliku, podpis FROM zdjecia ORDER BY podpis ASC
+
+
+kw 3
+SELECT zdjecia.podpis, wycieczki.cena, wycieczki.cel FROM wycieczki INNER JOIN zdjecia on zdjecia.id = wycieczki.zdjecia_id WHERE cena < 1200;
+
+
+kw 4
+ALTER TABLE `wycieczki` DROP `dataWyjazdu`;
+

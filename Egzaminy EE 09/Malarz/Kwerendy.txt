@@ -1,0 +1,8 @@
+kw1
+SELECT `cena` FROM `farby` WHERE `kolor` = 'niebieski';
+
+kw2
+SELECT `kolor`, `cena`/`pojemnosc` FROM `farby` WHERE 1;
+
+kw3
+SELECT farby.kolor FROM farby INNER JOIN malowanie on farby.id_farby = malowanie.id_farby WHERE malowanie.id_pomieszczenia = 3;

@@ -1,0 +1,43 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-style: italic;
+}
+
+#header {
+    background-color: lightpink;
+    height: 80px;
+    padding-top: 10px;
+}
+
+#lewy {
+    background-color: lightpink;
+    height: 500px;
+    width: 20%;
+    size: 20px;
+    float: left;
+}
+
+#prawy {
+    background-color: black;
+    height: 500px;
+    width: 80%;
+    size: 30px;
+    color: lightpink;
+    float: left;
+}
+
+#foter {
+    background-color: lightpink;
+    height: 60px;
+    clear: both;
+}
+
+#img {
+    width: 180px;
+    height: 180px;
+}
+
+p {
+    padding-top: 50px;
+}

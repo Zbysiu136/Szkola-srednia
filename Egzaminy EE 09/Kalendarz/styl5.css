@@ -1,0 +1,49 @@
+* {
+    font-family: arial;
+}
+
+#baner1 {
+    background-color: #483d8b;
+    height: 150px;
+    width: 30%;
+    float: left;
+}
+
+#baner2 {
+    float: left;
+    background-color: #483d8b;
+    color: white;
+    height: 150px;
+    width: 70%;
+}
+
+.blok {
+    background-color: #AFEEEE;
+    width: 150px;
+    height: 100px;
+    margin: 3px;
+    border-radius: 1px;
+    border-style: solid;
+    float: left;
+}
+
+#blok {
+    background-color: #AFEEEE;
+    width: 150px;
+    height: 100px;
+    margin: 3px;
+    border-radius: 1px;
+    border-style: solid;
+    float: left;
+}
+
+#stopka {
+    background-color: #483d8b;
+    color: white;
+    padding: 10px;
+    clear: both;
+}
+
+h5 {
+    text-align: center;
+}

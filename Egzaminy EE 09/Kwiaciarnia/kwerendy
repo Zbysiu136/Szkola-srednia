@@ -1,0 +1,10 @@
+kw 1
+SELECT `nazwa`, `ulica` FROM kwiaciarnie WHERE `miasto` = 'Malbork';
+
+
+kw 2
+SELECT `id_zam` FROM zamowienia WHERE `data` = "07.01.2017";
+
+
+kw 3
+SELECT id_kwiaciarni, COUNT(id_zam) FROM zamowienia GROUP BY id_kwiaciarni;
