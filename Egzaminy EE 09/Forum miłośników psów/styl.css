@@ -1,0 +1,53 @@
+*{
+    font-family: serif;
+}
+
+#baner{
+    background-color: #c8e6c9;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+#lewy{
+    background-color: #c8e6c9;
+    color: #005005;
+    width: 40%;
+    height: 600px;
+    float: left;
+}
+
+#prawy{
+    color: #005005;
+    width: 60%;
+    height: 600px;
+    scrollbar-color: red;
+    float: left;
+}
+
+#stopka{
+    background-color: #c8e6c9;
+    color: white;
+    padding: 12px;
+    clear: both;
+}
+
+#video{
+    width: 100%;
+}
+
+#form{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#button{
+    background-color: #97b498;
+}
+
+#button:hover{
+    background-color: white;
+    color: #97b498;
+}
