@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Strona</title>
+</head>
+<body>
+<script type="text/javascript">
+   function f1(x){
+       return x*x-x;
+   }
+   function f2(x){
+       return x*x*x-2*x;
+   }
+</script>
+ <table border=1>
+ <tr><th>x</th><th>x<sup>2</sup>-x</th><th>x<sup>3</sup>-2*x</th></tr>
+
+ <tr>
+     <td>8</td>
+ <td>
+     <script type="text/javascript">
+    document.write(f1(8));
+    </script>
+ </td>
+ <td>
+     <script type="text/javascript">
+        document.write(f2(8));
+    </script>
+ </td>
+    </tr>    
+    <tr>
+        <td>12</td>
+        <td>
+            <script type="text/javascript">
+                document.write(f1(12));
+                </Script>
+        </td>
+    <td>
+        <script type="text/javascript">
+            document.write(f2(12));
+            </Script>
+</td>
+</tr> 
+<tr>
+    <td>22</td>
+    <td>
+        <script type="text/javascript">
+            document.write(f1(22));
+            </Script>
+    </td>
+    <td>
+        <script type="text/javascript">
+            document.write(f2(22));
+            </Script>
+    </td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>tablice</title>
+</head>
+<body>
+    <div id=a></div>
+    <div id=b></div>
+    <script type="text/javascript">
+        let tablica1 = new Array();
+        let tablica2 = new Array(10);
+        let tablica3 = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        let tablica4 = [];
+        let tablica5 = [10];
+        let tablica6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        document.write(tablica3[3] + "<br>");
+        tablica3[3] = 100;
+        document.write(tablica3[3] + "<br>");
+        document.write(tablica3.length + "<br>");
+        tablica3.push(200);
+        document.write(tablica3.length + "<br>");
+
+        tablica3.forEach((wartosc, indeks) => {
+            document.write(indeks+";"+wartosc+" ")
+        });
+
+        tablica3.pop()
+        document.write("<br>"+tablica3.length+"<br>")
+
+        for (let i = 0; i < tablica3.length; i++) {
+            document.write(tablica3[i] + " ");
+        }
+        document.write("<br>");
+        document.write(tablica3);
+        document.write("<br>");
+        document.write(tablica3[500]);
+        document.write("<br>");
+        for (let i = 0; i < tablica3.length; i++) {
+            
+            if (i == 7) {
+               
+                document.write("<font color=red>");
+                document.write(tablica3[i] + " ");
+                document.write("</font>");
+            } 
+            else document.write(tablica3[i] + " ");
+        }
+
+        const divy = document.querySelectorAll('div');
+
+        divy.forEach((Element, indeks) => {
+            document.write(Element.id+"-->"+indeks+"<br>")
+        });
+
+    </script>
+</body>
+</html>

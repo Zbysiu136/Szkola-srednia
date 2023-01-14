@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>   
+    <style>
+        #b1{
+            background-color: aqua;
+            height: 100px;
+            width: 300px;
+        }
+        #b2{
+            background-color: red;
+            height: 100px;
+            width: 300px;
+        }
+        #b3{
+            background-color: green;
+            height: 100px;
+            width: 300px;
+        }
+        #spr{
+   margin-left: 100px;
+            height: 50px;
+            width: 70px;
+        }
+        #a{
+            height: 20px;
+            width: 300px;
+        }
+        #b{
+            height: 20px;
+            width: 300px;
+        }
+    </style>
+    <meta charset="utf-8">
+    <title>strona</title>
+    <body>
+        <script>
+ 
+ function klik(){
+            let a = document.getElementById("a").value
+            let b = document.getElementById("b").value
+
+            if(a>b)
+            document.getElementById("wynik").innerHTML = "a>b"
+            if(a<b)
+            document.getElementById("wynik").innerHTML = "b>a"
+ }
+          
+        </script>
+        <div id="b1">  </div>
+        <div id="b2">  </div>
+        <div id="b3">  </div>
+ 
+        <input type="text" name="A" id="a" >
+     <br>
+     <input type="text" name="B" id="b" >
+     <br>
+     <button type="button" id="spr" onclick="klik()" value="0"> Sprawdz </button>
+     <br>
+     <div id="wynik"></div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+    var mid = 0 //średnia 
+    var n = prompt("Podaj illość")
+    n = parseInt(n)
+    for(let i=1; i<n+1; i++){
+    var los = Math.floor(Math.random()*100)
+    document.write(los+"<br>")
+    mid = mid + los 
+    if(i==n)
+    mid = mid / n
+    }
+
+
+    document.write("<br> średnia liczb jest równa "+ mid)
+    </script>
+</body>
+</html>

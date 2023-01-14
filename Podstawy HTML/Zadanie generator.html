@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Generator</title>
+    <style>
+        #gora{
+            background-color: white;
+            border-width: 10px; border-style: solid; border-color: black;
+            height: 150px;
+            width: 300px;
+            position:relative;
+            left: calc(50% - 300px);
+            top: 50px;
+        }
+        #lewo{
+            background-color: white;
+            border-width: 10px; border-style: solid; border-color: black;
+            height: 240px;
+            width: 150px;
+            position:relative;
+            left: calc(50% - 300px);
+            top: 40px;
+        }
+        #prawo{
+            background-color: white;
+            border-width: 10px; border-style: solid; border-color: black;
+            height: 240px;
+            width: 140px;
+            position:relative;
+            left: calc(50% - 140px);
+            top: -220px;
+        }
+        #goraparametry{
+            position:relative;
+            left: calc(50% - 215px);
+            top: -600px;
+        }
+        #n{
+            border-width: 3px; border-color: black;
+            width: 100px;
+        }
+        #klik{
+            position:relative;
+            left: calc(50% - 240px);
+            top: -570px;
+            width: 200px;
+            height: 35px;
+        }
+        #liczby{
+            position:relative;
+            left: calc(50% - 280px);
+            width: 130px;
+            height: 220px;
+            top: -520px;
+            font-size: 15px;
+        }
+        #suma{
+            position:relative;
+            left: calc(50% - 125px);
+            width: 130px;
+            height: 50px;
+            top: -730px;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        #opis{
+            position:fixed;
+            background-color: white;
+            border-width: 10px; border-style: solid; border-color: black;
+            left: calc(20% - 60px);
+            top: 550px;
+            height: 35px;
+            font-size: 30px;
+        }
+
+        #gen{
+            width: 125px;
+            height: 220px;
+        }
+    </style>
+</head>
+<body> 
+    <!-- Obramowania -->
+<div id=gora></div>
+<div id=lewo></div>
+<div id=prawo></div>
+    
+   <!-- Góra  -->
+   <div id=goraparametry>
+   n= <input type="number" id="n">
+   </div>
+   <button type="button" id="klik" onclick="f1lewo()">Generuj</button>
+
+    <!-- Lewo  -->
+    <div id=liczby>
+        <textarea id="gen" disabled></textarea>
+    <script>
+function f1lewo(){
+
+    var tablica = new Array()
+    document.getElementById("gen").innerHTML = " "
+
+    var n = document.getElementById("n").value
+
+    var sumajs = 0
+    var srednia = 0
+
+    for(let i=0; i<n; i++){
+    tablica[i] = Math.floor(Math.random()*100)
+    document.getElementById("gen").innerHTML = tablica[i] + " " + document.getElementById("gen").innerHTML
+            sumajs = sumajs+tablica[i]
+            srednia = Math.floor(sumajs/n) 
+            document.getElementById("suma").innerHTML = "Suma liczb to: " + sumajs + "<br>" + "Średnia liczb to: " + srednia
+ }
+}
+
+    </script>
+    </div>
+
+   
+    <!-- Prawo  -->
+    <div id="suma"></div>
+    <div id="opis">Strona generuje liczby losowe od 1 do 100 gdzie wpisane n to ilość liczb do wygenerowania</div>
+</body>
+</html>

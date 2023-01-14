@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kutaz</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <img id="obrazek1" src="pic1.jpg" onclick="f1()">
+        <img id="obrazek2" src="pic2.jpg" onclick="f1()">
+        <script type="text/javascript">
+            var rot = 0;
+
+            function f1(){
+                if(rot==0){
+            document.getElementById("obrazek1").src ="pic2.jpg"
+            document.getElementById("obrazek2").src ="pic1.jpg"
+            rot = 1
+                }
+                else {
+            document.getElementById("obrazek1").src ="pic1.jpg"
+            document.getElementById("obrazek2").src ="pic2.jpg"
+            rot = 0
+            }
+        }
+
+            </script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+
+        function liczba_pierwsza(x, y) {
+
+            liczby = Array()
+
+            if (x == y) y++
+            if (x < y && x >= 0 && x != y) {
+                for (let i = x; i <= y; i++) {
+                    if (i == 1 || i == 0 || i == 2)
+                        continue
+                    if (liczby.length == 5)
+                        break
+
+                    for (let j = Math.ceil(i / 2); j > 0; j--) {
+                        if (j == 1) {
+                            liczby[liczby.length] = i
+                        }
+
+                        if (i % j == 0) { //reszta 0 czyli podzielna
+                            break
+                        }
+                    }
+                }
+
+
+                if (liczby.length < 5)
+                    alert("Liczb pierwszych w przedziale jest: " + liczby.length)
+                document.write(liczby)
+            }
+
+
+            else if (x > y)
+                alert("Początek przedziału nie może być większy od jego końca")
+            else if (x < 0)
+                alert("Przedział nie może zawierać liczb ujemnych")
+        }
+
+        liczba_pierwsza(1, 111)
+
+    </script>
+
+</body>
+
+</html>

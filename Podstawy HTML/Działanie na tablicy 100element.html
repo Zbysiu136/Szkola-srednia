@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Działanie na tablicy</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+var tablica = new Array()
+for (let i = 0; i!=100; i++){
+tablica.push(getRandomInt(1,100))
+} //koniec tworzenia tablicy
+
+//Zadanie A
+function A(){
+    var xyz = tablica
+    xyz.sort()
+var A = xyz[99]
+var ailosc=0
+document.write("Największa liczba to "+A)
+for(let i=0; i!=100; i++){
+if(xyz[i]==A){
+    ailosc=ailosc+1
+}}
+document.write(" Liczba ta znajduje się "+ailosc+" razy w tablicy")
+}
+
+
+//Zadanie B
+
+function B(){
+for (let i = 0; i!=100; i++){
+if(tablica[i]%2==1){
+document.write(tablica[i]+"<br>")
+}}
+}
+
+//Zadanie C
+
+function C(){
+for (let i = 0; i!=100; i++){
+if(i%2==1){
+document.write(tablica[i])
+document.write("<br>")
+}}
+}
+
+//Zadanie D
+
+function D(){
+let dilosc=0
+for (let i = 0; i!=100; i++){
+if(tablica[i]>=5 && tablica[i]<=15){
+document.write(tablica[i]+"<br>")
+dilosc=dilosc+1
+}}
+document.write("Liczba wyświetliła się "+ dilosc+ " razy")
+}
+
+//Zadanie E
+function E(){
+    var xyz = tablica
+    xyz.sort()
+document.write(xyz)
+}
+
+document.write("Zadanie A <br>")
+A()
+document.write("<br><br> Zadanie B<br>")
+B()
+document.write("<br><br> Zadanie C <br>")
+C()
+document.write("<br><br> Zadanie D <br>")
+D()
+document.write("<br><br> Zadanie E <br>")
+E()
+document.write("<br><br> Zadanie F <br>")
+F()
+document.write("<br><br> Zadanie G <br>")
+ </script>
+ </body>
+</html>

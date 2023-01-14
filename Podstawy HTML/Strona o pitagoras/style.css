@@ -1,0 +1,50 @@
+     body{
+                background-color: rgba(201, 141, 141, 0.829);
+                color: white;
+            }
+#tytuł{
+    padding: 30px;
+    color: black;
+    font-size: 40px;
+    text-align: center;
+}
+#txt1{
+    font-size: 25px;
+}
+#txt2{
+    font-size: 25px;
+}
+#txt3{
+    margin: 0px 0 -0px;
+    font-size: 25px;
+}
+#txt4{
+    
+    font-size: 25px;
+}
+#txt5{
+    text-align: center;
+    font-size: 30px;
+}
+#klik {
+                 outline: none;
+                 height: 25px;
+                 width: 178px;
+                 margin: 0 54px;
+}
+#b{
+    position: relative;
+    right: 1px;
+}
+#c{
+    position: relative;
+    right: 1px;
+    
+}
+#b2{
+    position: relative;
+    left: -1px;
+}
+    #jpg1{
+    margin: 0 -10px;
+}

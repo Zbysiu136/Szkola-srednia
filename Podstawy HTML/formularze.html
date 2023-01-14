@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-Type" content="text/html"; charset=utf-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+     function licz(formularz){
+        if(formularz.a.value=="" || formularz.b.value=="")
+        alert("Wprowadź dane");
+        else{
+       a=parseFloat(formularz.a.value); 
+       b=parseFloat(formularz.b.value);
+formularz.p.value=a*b; 
+formularz.o.value=2*a+2*b;
+        }
+}
+
+</script>
+<form name="formularz1" action="">
+Podaj bok a: <input type="text" name="a"><br><br>
+Podaj bok b: <input type="text" name="b"><br><br>
+<input type="button" value="Oblicz..." onClick="licz(this.form)"><br><br>
+Wynik:<br><br>
+Pole prostokąta: <input type="text" name="p" disabled><br><br>
+Obwód prostokąta: <input type="text" name="o" disabled>
+        </form>
+    </body>
+</html>

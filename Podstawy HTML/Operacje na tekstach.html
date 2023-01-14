@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Zadnia</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        document.write("Zadanie 1 <br>")
+        const text1 = prompt("Podaj słowo");  //Początek zadanie 1
+        var length = text1.length;
+
+        if (length < 5)
+            document.write(text1.toLowerCase(text1));
+        else if (length == 5)
+            document.write(text1)
+        else if (length > 5)
+            document.write(text1.toUpperCase(text1)); //Koniec zadanie 1
+        document.write("<br><br>")
+
+        document.write("Zadanie 2 <br>")
+        function CharCheck() {    //Zadanie 2 początek
+
+            var text2 = prompt("Podaj zdanie")
+            var char = prompt("Podaj znak")
+            var cout = 0;
+
+            for (let i = 0; i != text2.length; i++) {
+                if (text2[i] == char)
+                    cout = cout + 1;
+            }
+
+            document.write("Twoje zdanie to *" + text2 + "* a twoja literka to *" + char + "* <br>");
+            document.write("Podana przez ciebie literka w zdaniu pojawiła się " + cout);
+
+            if (cout == 1)
+                document.write(" raz");
+            else
+                document.write(" razy");
+            document.write("<br><br>")
+        }
+        CharCheck(); //Koniec zadanie 2
+
+        document.write("Zadanie 3 <br>") //Początek zadanie 3
+
+        function division() {
+            var text3 = prompt("Podaj zdanie do podziału");
+            var begin = 0;
+            for (var i = 0; i != text3.length; i++) {
+                if (text3[i] == " ") {
+                    document.write(text3.substring(begin, i) + "<br>");
+                    begin = i;
+                }
+            }
+        }
+        division(); //Koniec zadanie 3
+
+        document.write("<br> Zadanie 4 <br>") //Początek zadanie 4
+        const text4 = "Dzisiaj jest wiosenna pagoda. Taka pagoda będzie się zdarzać coraz częściej. Taką pagodę bardzo lubię."; //Początek zadanie 4
+        const textNew4 = text4.replace("pagoda", "pogoda");
+        const textNew4a = textNew4.replace("pagoda", "pogoda");
+        const textNew4b = textNew4a.replace("pagoda", "pogoda");
+        const textNew4c = textNew4b.replace("pagoda", "pogoda");
+        document.write(textNew4c); //Koniec zadanie 4
+        document.write("<br>");
+
+        document.write("<br> Zadanie 5 <br>"); //Początek zadanie 5
+        var text5 = prompt("Podaj swoje imię ");
+        document.write("Masz na imię " + text5)
+        if (text5.endsWith("a")) {
+            document.write(", jesteś płci żeńskiej");
+        }
+
+        else {
+            document.write("Jesteś płci męskiej"); //Koniec zadanie 5
+        }
+        document.write("<br>");
+
+        document.write("<br> Zadanie 6 <br>") //Początek zadanie 6
+        var text6 = prompt("Podaj swoje imię ");
+        text6.toLowerCase()
+        document.write("Masz na imię " + text6)
+        if (text6.endsWith("a"))
+            document.write(", jesteś płci żeńskiej");
+        else if (text6.endsWith != ("a") || text6 == "kuba" || text6 == "Zawisza" || text6 == "Jerema");
+        document.write(" Jesteś płci męskiej");
+
+
+
+
+
+    </script>
+</body>
+
+</html>

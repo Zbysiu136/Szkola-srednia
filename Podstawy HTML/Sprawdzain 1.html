@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Divy</title>
+        <meta charset="utf-8">
+        <style>
+            *
+            {
+                font-size: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #logo
+            {
+                background-color: lightblue;
+                text-align: center;
+                padding: 15px;
+                min-height: 150px;
+            }
+            #nav
+            {
+                float: left;
+                background-color: yellow;
+                padding: 10px;
+                width: calc(50% - 20px);
+                min-height: 400px;
+            }
+            #content
+            {
+                float: left;
+                background-color: lightgreen;
+                padding: 10px;
+                width: calc(50% - 20px);
+                min-height: 400px;
+            }
+            #footer
+            {
+                clear: both;
+                background-color: lightblue;
+                padding: 15px;
+                text-align: center;
+                min-height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="logo">
+            <script type="text/javascript">
+                let losowa=Math.floor(Math.random()*50)+1
+                let tablica=[]
+                let licznik=0
+                let min=50
+                let max=0
+                let suma=0
+
+                for(var i=0;i<100;i++)
+                {
+                    tablica[i]=Math.floor(Math.random()*50)+1
+                    if(tablica[i]==losowa) licznik++
+                    if(tablica[i]>max) max=tablica[i]
+                    if(tablica[i]<min) min=tablica[i]
+                    suma=suma+tablica[i]
+                }
+
+                document.write("Min="+min+"<br>")
+                document.write("Max="+max+"<br>")
+            </script>
+        </div>
+        <div id="nav">
+            <script type="text/javascript">
+                document.write("Liczba "+losowa+" wystąpiła "+licznik+" razy")
+            </script>
+        </div>
+        <div id="content">
+            <script type="text/javascript">
+                for(var i=0;i<100;i++)
+                {
+                    document.write(tablica[i]+" ")
+                }
+            </script>
+        </div>
+        <div id="footer">
+            <script type="text/javascript">
+                document.write("Suma liczb="+suma)
+            </script>
+        </div>
+    </body>
+</html>
