@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    zadanie 1
+    <br><br>
+    <script>
+        
+        function uczen1(imie, nazwisko, wiek, rokstudiów, stypendium)
+        {
+            this.imie = imie;
+            this.nazwisko = nazwisko;
+            this.wiek = wiek;
+            this.rokstudiów = rokstudiów;
+            this.stypendium = stypendium;
+        }
+        const uczen = new uczen1("Marek", "Kowalski", "23", "3", "2000zł");
+
+        document.write("Imię: "+uczen.imie+"<br>");
+        document.write("Nazwisko: "+uczen.nazwisko+"<br>");
+        document.write("Wiek: "+uczen.wiek+"<br>");
+        document.write("Rok studiów: "+uczen.rokstudiów+"<br>");
+        document.write("Stypendium: "+uczen.stypendium+"<br>");
+    </script>
+    <br><br>
+
+    zadanie 2
+    <br><br>
+    <script>
+        var dzien = new Date();
+        var dni = new Array("Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela")
+        document.write("Dzisiaj jest "+dni[dzien.getDay()]);
+    </script>
+    <br><br>
+
+    zadanie 3
+    <br><br>
+    <script>
+        var data = new Date();
+        var miesiac = new Array("Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień")
+        
+        document.write("Dzień: "+[data.getDate()]+"<br>");
+        document.write("Miesiąc: "+miesiac[data.getMonth()]+"<br>");
+        document.write("Rok: "+[data.getFullYear()]+"<br>");
+
+        </script>
+</body>
+</html>
