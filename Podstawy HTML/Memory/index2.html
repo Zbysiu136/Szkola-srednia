@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zdarzenia</title>
+</head>
+<body>
+    <div class="egg">
+        <div class="stripe stripe--heart"></div>
+        <div class="stripe stripe--zz"></div>
+        <div class="stripe stripe--dots
+                 "></div>
+      </div>
+   <style>
+       :root {
+    --blue: #3d75df;
+    --red: #cf2f4a;
+    --black: #000000;
+}
+
+.egg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 200px;
+  height: 300px;
+  margin: 50px;
+  padding: 25px 0;
+  background-color: var(--red);
+  border-radius: 100px / 180px 180px 120px 120px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.stripe {
+  width: 100%;
+  height: 40px;
+  border-top: solid 5px var(--black);
+  border-bottom: solid 5px var(--black);
+  background-color: var(--blue);
+}
+
+.stripe--dots {
+  background-image: 
+    radial-gradient(var(--black) 2px, transparent 0),
+    radial-gradient(var(--black) 4px, transparent 0);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+.stripe--zz {
+  background-color: var(--black);
+  background-image:
+    linear-gradient(45deg, var(--blue) 25%, transparent 0),
+    linear-gradient(135deg, var(--blue) 25%, transparent 0),
+    linear-gradient(225deg, var(--blue) 25%, transparent 0),
+    linear-gradient(315deg, var(--blue) 25%, transparent 0);
+  background-size: 40px 40px;
+}
+
+.stripe--heart {
+  background-image:
+    linear-gradient(135deg, var(--black) 15%, transparent 0),
+    linear-gradient(225deg, var(--black) 15%, transparent 0),
+    radial-gradient(var(--black) 30%, transparent 0),
+    radial-gradient(var(--black) 30%, transparent 0);
+  background-size: 40px 40px;
+  background-position: 25px 22px, 25px 22px, 0 -3px, 10px -3px;
+}
+
+   </style>
+</body>
+</html>
