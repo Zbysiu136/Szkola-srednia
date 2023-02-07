@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Liczby losowe</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type=text/javascript>
+  function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+          
+          for (let i = 0; i!=10; i++){
+          document.write(getRandomInt(1,10));
+          document.write("<br>");
+          }
+          </script>
+    </body>
+</html>
