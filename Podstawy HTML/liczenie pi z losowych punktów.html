@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+
+        //parametry
+        var count = 4000
+        var r = 1
+        var range = 2
+
+        //zmienne stałe
+        var pointx = [0]
+        var pointy = [0]
+        var inside = 0
+        var outside = 0
+        var range = range / 2 + 1
+
+
+
+        for (let i = 1; i <= count; i++) {
+
+            pointx[i] = Math.random() * range
+            if (Math.floor(Math.random() * 2) == 1)
+                pointx[i] = pointx[i] * -1
+            pointy[i] = Math.random() * range
+            if (Math.floor(Math.random() * 2) == 1)
+                pointy[i] = pointy[i] * -1
+            
+
+            if (pointx[i] * pointx[i] + pointy[i] * pointy[i] <= r * r)
+                inside = inside + 1
+            else
+                outside = outside + 1
+        }
+
+        //logi
+        function log1(){
+            
+            for (let i = 1; i <= count; i++) {
+                console.log(pointx[i]+", "+pointy[i])
+            }
+        }
+
+        function log2(){
+            var wynik = ["text"] 
+            var repeats = 0
+            for (let i = 1; i <= count; i++) {
+                wynik[i] = pointx[i]+" ,"+pointy[i]
+                for(let j = 1; j<= count; j++)
+                if(pointx[j]+" ,"+pointy[j] == pointx[i]+" ,"+pointy[i]) 
+                repeats = repeats + 1
+        }
+        console.log("Points repeat count: "+repeats)
+    }
+        
+        //wynikowe
+        let pi = (4*inside) / outside
+
+
+        //wypisanie wartości
+        document.write("Point inside: " + inside)
+        document.write("<br>")
+        document.write("Point outside: " + outside)
+        document.write("<br>")
+        document.write("<br>")
+        document.write("Point in total: " + count)
+        document.write("<br>")
+        document.write("PI: " + pi)
+    </script>
+
+</body>
+
+</html>
