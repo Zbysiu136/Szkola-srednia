@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zdarzenia</title>
+    </head>
+    <body>
+        <div>
+            Szerkość:<input type="number" id="boka" value="200">
+            <br>
+            Wysokość:<input type="number" id="bokb" value="200">
+        </div>
+
+        <div>
+            <span id="kwadrat">Kwadrat</span>
+        <br>
+        <div>
+            <span id="wynik"></span>
+            </div>  
+        <img id="obrazek" src="https://plchldr.co/i/200x200?&bg=00ff00&fc=ffffff&text=ala" alt="obrazek">
+        </div>
+        <p onmouseover=f1(this) onmouseout=f2(this)>ala ma kota</p>
+
+        <script>
+            let wynik=document.getElementById("wynik")
+            let kwadrat=document.getElementById("kwadrat")
+            let obrazek=document.getElementById("obrazek")
+
+            kwadrat.onclic=function(){
+let boka=document.getElementById("boka").value
+let bkob=document.querySelector("#bokb").value
+wynik.innerHTML="Pole kwadratu o boku "+boka+" wynosi"+(boka*boka)+" pole prostokąta o bokach "+boka+" i "+bokb+" wynosi"+(boka*bokb)
+            }
+
+            obrazek.onmouseout=function(){
+                this.style.width="300px"
+                obrazek.style.height="100px"
+            }
+            function f1(el){
+                el.innerHTML="Ola ma psa"
+                el.style.fonstSize="40px"
+                el.style.color="ffabab"
+            }
+            function f2(el){
+                el.innerHTML="Ala ma kota"
+                el.style.fonstSize="initial"
+                el.style.color="black"
+            }
+        </script>
+    </body>
+</html>

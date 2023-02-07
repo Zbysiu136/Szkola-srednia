@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Obliczanie sumy po opodatkowaniu</title>
+    </head>
+    <body>
+        <script>
+
+function f1(){
+    document.getElementById("txt").innerHTML = student
+            wynik = (document.getElementById('podatek').value/100)*document.getElementById('kwota')
+            document.getElementById("wynik").innerHTML = wynik
+}
+            
+        </script>
+        <div id="all">
+            <input type="number" id="kwota">
+            <select id="podatek">
+                <option value="7">7%</option>
+                <option value="12">12%</option>
+                <option value="24">24%</option>
+            </select>
+
+  Miasto<input type="radio" id="miasto"  name="miejsce">
+  Wieś<input type="radio" id="wies" name="miejsce">
+
+  Jestem studentem<input type="checkbox" id="student">
+  <div id="wynik"></div>
+
+  <input type="button" id="klik" value="Sprawdz" onclick="f1()">
+
+
+
+
+        </div>
+    </body>
+</html>

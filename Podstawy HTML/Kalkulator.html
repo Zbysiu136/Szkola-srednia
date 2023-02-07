@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+
+            #all{
+                position: fixed;
+                left: calc(50% - 250px);
+                width: 500px;
+                height: 800px;
+                border-width: 10px; border-style: solid; border-color: black;
+                background-color: cadetblue;
+            }
+            
+            #top{
+                position: absolute;
+                left: 60px;
+                top: 15px;
+
+
+            }
+            #cout{
+                position: absolute;
+                left: 45px;
+                top: 50px;
+                width: 400px;
+                height: 70px;
+                border-width: 6px; border-style: solid; border-color: black;
+                background-color: aqua;
+            }
+
+            #wynik{
+                position: absolute;
+                left: 350px;
+                border-width: 6px; border-style: solid; border-color: black;
+                height: 100px;
+                width: 100px;
+            }
+
+            #buttons{
+                position: relative;
+                top: 120px;
+                padding: 60px;
+                width: 500px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <script>
+            var wynik = 0
+            document.getElementById("wynik").innerHTML = "Ananas"
+
+        </script>
+        <div id="cialo"></div>
+        <div id="all">
+        <div id="top">Kalkulator ZSM1 Corporation</div>
+        <div id="cout"></div>
+        <div id="wynik">0</div>
+        <div id="buttons">
+            <div id="lin1">
+            <button id="off" style="height: 90px; width: 90px;">OFF</button>
+            <button id="pier" style="height: 90px; width: 90px;">√</button>
+            <button id="proc" style="height: 90px; width: 90px;">%</button>
+            <button id="dzie" style="height: 90px; width: 90px;">÷</button>
+        </div>
+        <div id="lin2">
+            <button id="7" style="height: 90px; width: 90px;">7</button>
+            <button id="8" style="height: 90px; width: 90px;">8</button>
+            <button id="9" style="height: 90px; width: 90px;">9</button>
+            <button id="mnoz" style="height: 90px; width: 90px;">x</button>
+        </div>
+        <div id="lin3">
+            <button id="4" style="height: 90px; width: 90px;">4</button>
+            <button id="5" style="height: 90px; width: 90px;">5</button>
+            <button id="6" style="height: 90px; width: 90px;">6</button>
+            <button id="-" style="height: 90px; width: 90px;">odej</button>
+        </div>
+        <div id="lin4">
+            <button id="1" style="height: 90px; width: 90px;">1</button>
+            <button id="2" style="height: 90px; width: 90px;">2</button>
+            <button id="3" style="height: 90px; width: 90px;">3</button>
+        </div>
+        <div id="lin4">
+            <button id="0" style="height: 90px; width: 90px;">0</button>
+            <button id="krop" style="height: 90px; width: 90px;">.</button>
+            <button id="rown" style="height: 90px; width: 90px;">=</button>
+            <button id="doda" style="height: 180px; width: 90px; position: fixed; left: 1042px; top: 468px; ">+</button>
+    </div>
+   
+    </body>
+</html>

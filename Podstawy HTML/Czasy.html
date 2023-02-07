@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Odliczanie czasu</title>
+</head>
+<body>
+<script>
+	var data = prompt("Podaj datę urodzin")
+	 var urodz = new Date(data);
+     var teraz = new Date();
+     var suma = urodz.getTime() - teraz.getTime();
+     var dni = Math.floor(suma / (1000 * 60 * 60 * 24));
+     if (dni > 1)
+       document.write("Do twoich urodzin zostało " + dni +" dni!")
+</script>
+	
+</body>
+</html>
