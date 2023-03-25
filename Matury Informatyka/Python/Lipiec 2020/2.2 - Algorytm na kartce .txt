@@ -1,0 +1,26 @@
+#Dodatkowe na potrzeby funkcji l_egipskie
+def sufit(n):
+    if n - int(n) > 0:
+        n = int(n) + 1
+        return n
+
+    return n
+
+
+def l_egipska(p, q):
+    a = sufit(q / p)
+
+    print(a)
+
+    r = p / q - a
+
+    r = (p*a) / (q*a) - (1*q) / (q*a)
+
+    if r == 0:
+        return
+    
+    else:
+        l_egipska(((p*a) - q), (q*a))
+
+
+l_egipska(4, 5) #2, 4, 20
