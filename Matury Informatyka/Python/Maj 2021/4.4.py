@@ -1,39 +1,36 @@
-with open(r"C:\Users\zbysi\Desktop\Informatyka\Python\Maj 2021\Test.txt") as f:
-    napis = []
-    nap = ""
-
+with open(r"C:\Users\zbysi\Desktop\Nowy folder\instrukcje.txt") as f:
+    kod = []
     for i in f:
-        print(napis)
-        print(i[-2])
+        i = i.split(" ")
 
-        if i[0] == "D":
-            napis.append(i[-2])
+        instrukcja = i[0]
+        znak = i[1][0]
 
-        if i[0] == "U":
-            for d in range(1, len(napis)):
-                if napis[d * (-1)] != "":
-                    napis[d * (-1)] = ""
+        if instrukcja == "DOPISZ":
+            kod.append(znak)
+
+        if instrukcja == "USUN":
+            kod.pop()
+
+        if instrukcja == "ZMIEN":
+            kod[-1] = znak
+
+        if instrukcja == "PRZESUN":
+            ok = 1
+            for j in range(0, len(kod)):
+                if kod[j] == znak:
+                    if znak == "Z":
+                        kod[j] = "A"
+                        ok = 0
+                        break
+
+                    if ok == 1:
+                        kod[j] = chr(ord(kod[j]) + 1)
+                        break
 
 
+koniec = ""
+for i in kod:
+    koniec = koniec + i
 
-        if i[0] == "Z":
-            napis[-1] = ""
-            napis.append(i[-2])
-
-        if i[0] == "P":
-            print(napis)
-            print(i[-2])
-            print(napis.count(i[-2]))
-            if napis.count(i[-2]) > 0:
-                napis[napis.index(i[-2])] = chr(ord(i[-2])+1)
-
-        print(napis)
-
-
-
-
-for j in napis:
-    nap = nap + j
-
-napis = nap
-print(napis)
+print(koniec)

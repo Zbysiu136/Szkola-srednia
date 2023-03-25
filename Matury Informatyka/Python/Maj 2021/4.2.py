@@ -1,26 +1,77 @@
-with open(r"C:\Users\zbysi\Desktop\Informatyka\Python\Maj 2021\instrukcje.txt") as f:
-    last = "x"
-    count = 0
+with open(r"C:\Users\zbysi\Desktop\Nowy folder\instrukcje.txt") as f:
+    kod = []
     maxi = 0
-    war = ""
+    l = ""
+
+    a = 0
+    b = 0
+    c = 0
+    d = 0
 
     for i in f:
+        i = i.split(" ")
+
+        instrukcja = i[0]
+        znak = i[1][0]
+
+        if instrukcja == "DOPISZ":
+            kod.append(znak)
+           
+            a = a + 1
+            b = 0
+            c = 0
+            d = 0
+
+        if instrukcja == "USUN":
+            kod.pop()
+            
+            a = 0
+            b = b + 1
+            c = 0
+            d = 0
+
+        if instrukcja == "ZMIEN":
+            kod[-1] = znak
+
+            a = 0
+            b = 0
+            c = c + 1
+            d = 0
+
+        if instrukcja == "PRZESUN":
+            for j in range(0, len(kod)):
+                if kod[j] == znak:
+                    if kod[j] == "Z":
+                        kod[j] == "A"
+                        ok = 0
+
+                    kod[j] == chr(ord(kod[j]) + 1)
+            
+            a = 0
+            b = 0
+            c = 0
+            d = d + 1
+        
+        print(a, b, c, d)
 
 
-        if i[0] == last:
-            count = count + 1
-            if count > maxi:
-                maxi = count
-                war = i
+        if a > maxi:
+            maxi = a
+            l = "DOPISZ"
+        
+        if b > maxi:
+            maxi = b
+            l = "USUN"
+        
+        if c > maxi:
+            maxi = c
+            l = "ZMIEN"
+        
+        if d > maxi:
+            maxi = d
+            l = "PRZESUN"
 
-        if i[0] != last:
-            count = 0
+            
 
 
-        last = i[0]
-
-
-
-
-print(maxi)
-print(war)
+print(maxi, l)

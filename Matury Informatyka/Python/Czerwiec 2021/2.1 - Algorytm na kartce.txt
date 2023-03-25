@@ -1,0 +1,21 @@
+def czy_k_podobne(n, A, B, k):
+    for i in range(0, k):
+        if A[i] != B[n-k+i]:
+            return False
+        
+    for i in range(0, n-k):
+        if A[k+i] != B[i]:
+            return False
+    
+    return True
+
+        
+
+def czy_podobne(n, A, B):
+    for i in range(1, n):
+        if czy_k_podobne(n, A, B, i) == True:
+            return True
+        
+    return False
+
+print(czy_podobne(5, [4, 7, 1, 4, 5] , [1, 4, 5, 4, 7]))

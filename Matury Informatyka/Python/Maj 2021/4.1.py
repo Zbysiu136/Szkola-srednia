@@ -1,13 +1,28 @@
-with open(r"C:\Users\zbysi\Desktop\Informatyka\Python\Maj 2021\instrukcje.txt") as f:
-    count = 0
-
+with open(r"C:\Users\zbysi\Desktop\Nowy folder\instrukcje.txt") as f:
+    kod = []
     for i in f:
-        x = list(i)
+        i = i.split(" ")
 
-        if x[0] == "D":
-            count = count + 1
+        instrukcja = i[0]
+        znak = i[1][0]
 
-        if x[0] == "U":
-            count = count - 1
+        if instrukcja == "DOPISZ":
+            kod.append(znak)
 
-print(count)
+        if instrukcja == "USUN":
+            kod.pop()
+
+        if instrukcja == "ZMIEN":
+            kod[-1] = znak
+
+        if instrukcja == "PRZESUN":
+            for j in range(0, len(kod)):
+                if kod[j] == znak:
+                    if kod[j] == "Z":
+                        kod[j] == "A"
+                        ok = 0
+
+                    kod[j] == chr(ord(kod[j]) + 1)
+
+
+print(len(kod))
